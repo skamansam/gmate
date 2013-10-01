@@ -4,6 +4,14 @@
 
 version3="`gedit --version | grep '\s3\.'`"
 
+#check for /usr/lib64 dir. You can set this as a ENV var
+if [[ -z "$libdir" ]]; then
+    libdir="/usr/lib64"
+fi
+if [ -d $libdir ]; then ; else
+    libdir="/usr/lib"
+fi
+
 if [ $(id -u) = "0" ]; then
     sudo="yes"
 else
@@ -95,7 +103,7 @@ fi
 if [ "$(echo $version3)" ]; then
     if [ $sudo = "yes" ]; then
         for plugin in plugins/gedit3/*; do
-            sudo cp -R $plugin /usr/lib/gedit/plugins/
+            sudo cp -R $plugin $libdir/gedit/plugins/
         done
     else
         if [ ! -d $HOME/.local/share/gedit/plugins ]; then
@@ -112,7 +120,7 @@ if [ "$(echo $version3)" ]; then
 else
     if [ $sudo = "yes" ]; then
         for plugin in plugins/gedit2/*; do
-            sudo cp -R $plugin/* /usr/lib/gedit-2/plugins/
+            sudo cp -R $plugin/* $libdir/gedit-2/plugins/
         done
     else
         if [ ! -d $HOME/.gnome2/gedit/plugins ]; then
