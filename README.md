@@ -104,6 +104,12 @@ please fill an issue in <http://github.com/gmate/gmate/issues>
 Refer to each plugin source code and readme file to get information about
 specific plugin licencing and copyright.
 
+### External Tool Additions
+
+Some external tools were added by Skaman Sam, but most were added from 
+<https://github.com/janlelis/gedit-external-tools> for git integration, 
+Ruby/Rails support, and more.
+
 ### Language Improvements and Mime Types
 
 * Basic YAML Syntax Highlight
