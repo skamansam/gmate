@@ -106,7 +106,7 @@ specific plugin licencing and copyright.
 
 ### External Tool Additions
 
-Some external tools were added by Skaman Sam, but most were added from 
+Some external tools were added by Samuel C. Tyler, but most were added from 
 <https://github.com/janlelis/gedit-external-tools> for git integration, 
 Ruby/Rails support, and more.
 
