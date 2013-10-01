@@ -1,0 +1,10 @@
+#!/bin/sh
+# [Gedit Tool]
+# Name=Execute Buffer [Ruby]
+# Languages=ruby,rubyonrails
+# Applicability=all
+# Output=output-panel
+# Input=selection
+# Save-files=nothing
+
+ruby /dev/stdin

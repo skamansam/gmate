@@ -18,6 +18,9 @@ else
     sudo="no"
 fi
 
+#copy gedit tools
+cp -r tools/ ~/.config/gedit/
+
 # Copy gedit facilities
 if [ $sudo = "yes" ]; then
     if [ ! -d $HOME/.gnome2/gedit ]; then

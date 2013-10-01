@@ -1,0 +1,16 @@
+#!/bin/sh
+# [Gedit Tool]
+# Name=Validate/ Reformat XHTML code
+# Languages=html,rubyonrails
+# Applicability=all
+# Output=output-panel
+# Input=nothing
+# Save-files=nothing
+
+zenity --question --title="Validate/ Reformat XHTML" --text="Should the XHTML file be reformated too?"
+case "$?" in
+        0)
+                exec tidy -utf8 -i -w 80 -c -q -asxhtml "$GEDIT_CURRENT_DOCUMENT_NAME";;
+        1)
+                exec tidy -e -utf8 -q  "$GEDIT_CURRENT_DOCUMENT_NAME";;
+        esac

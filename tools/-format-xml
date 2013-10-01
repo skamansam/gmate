@@ -1,0 +1,10 @@
+#!/bin/sh
+# [Gedit Tool]
+# Name= Format XML
+# Languages=xml
+# Applicability=all
+# Output=replace-document
+# Input=document
+# Save-files=nothing
+
+xmllint --format -

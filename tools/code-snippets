@@ -1,0 +1,9 @@
+#!/bin/sh
+# [Gedit Tool]
+# Input=nothing
+# Save-files=nothing
+# Name=Code Snippets
+# Applicability=all
+# Output=output-panel
+
+python /usr/bin/pysnippet.py &

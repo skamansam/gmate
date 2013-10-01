@@ -1,0 +1,16 @@
+#!/bin/sh
+# [Gedit Tool]
+# Name=Validate/ Optimize CSS...
+# Languages=css,rubyonrails
+# Applicability=all
+# Output=output-panel
+# Input=document
+# Save-files=nothing
+
+zenity --question --title="Validate/ Optimize CSS" --text="Should the stylesheet file optimized too?"
+case "$?" in
+        0)
+                exec csstidy "$GEDIT_CURRENT_DOCUMENT_NAME"  --compress_colors=true --lowercase_s=true --optimise_shorthands=true --compress_font-weight=true --merge_selectors=true --template=high --discard_invalid_properties=false "$GEDIT_CURRENT_DOCUMENT_NAME";;
+        1)
+                exec csstidy "$GEDIT_CURRENT_DOCUMENT_NAME"  --compress_colors=true --lowercase_s=true --optimise_shorthands=true --compress_font-weight=true --merge_selectors=true --template=high --discard_invalid_properties=false "/tmp/$GEDIT_CURRENT_DOCUMENT_NAME";;
+        esac

@@ -1,0 +1,10 @@
+#!/bin/sh
+# [Gedit Tool]
+# Name=Execute Buffer [Python]
+# Languages=python,python3
+# Applicability=all
+# Output=output-panel
+# Input=selection
+# Save-files=nothing
+
+python /dev/stdin

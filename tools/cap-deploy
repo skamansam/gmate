@@ -1,0 +1,10 @@
+#!/bin/sh
+# [Gedit Tool]
+# Name=cap staging deploy
+# Languages=rubyonrails
+# Applicability=all
+# Output=output-panel
+# Input=nothing
+# Save-files=nothing
+
+cap staging deploy

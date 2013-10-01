@@ -1,0 +1,9 @@
+#!/bin/sh
+# [Gedit Tool]
+# Input=nothing
+# Save-files=nothing
+# Name=Check for broken Links of a Website
+# Applicability=all
+# Output=output-panel
+
+exec gurlchecker `zenity --entry --title="Links prüfen" --width="500" --height="150" --text="Enter the URL to validate:\n " --entry-text "http://www." ` &
